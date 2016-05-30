@@ -7,6 +7,10 @@ Can add owner to any record in a cakephp project
 ```
 $this->addBehavior('Owner');
 ```
+Or with configurations:
+```
+$this->addBehavior('Owner', ["owner_field" => "owner_id", "ownerProperty" => "current_user_owner_id"]);
+```
 - In each controller you want to use it, you need to add a property to TableRegistry associated with your table. "Sample" is an example of TableRegistry name.
 ```
 public function beforeFilter(Event $event){
